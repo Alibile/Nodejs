@@ -14,14 +14,13 @@ function useLaunches(onSuccessSound, onAbortSound, onFailureSound) {
     const fetchedLaunches = await httpGetLaunches();
     saveLaunches(fetchedLaunches);
   }, []);
-
   useEffect(() => {
     getLaunches();
   }, [getLaunches]);
 
   const submitLaunch = useCallback(async (e) => {
     e.preventDefault();
-    // setPendingLaunch(true);
+    setPendingLaunch(true);
     const data = new FormData(e.target);
     const launchDate = new Date(data.get("launch-day"));
     const mission = data.get("mission-name");
