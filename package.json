@@ -25,5 +25,8 @@
   "homepage": "https://github.com/Alibile/Nodejs#readme",
   "devDependencies": {
     "concurrently": "^8.2.1"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.0"
   }
 }

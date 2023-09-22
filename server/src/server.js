@@ -5,7 +5,7 @@ const server = http.createServer(app)
 const {loadlPanetsData} = require("./models/planets.model")
 
 async function startServer() {
-    await loadlPanetsData
+ await loadlPanetsData()
 server.listen(PORT, ()=> {
     console.log(`Listening on port ${PORT}...`);
 })
