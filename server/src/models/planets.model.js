@@ -34,7 +34,11 @@ function loadlPanetsData() {
  })
   
 }
+
+function httpGeAllPlanets() {
+  return habitablePlanets
+}
   module.exports = {
     loadlPanetsData,
-    planets: habitablePlanets
+    httpGeAllPlanets
   }
