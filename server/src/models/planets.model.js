@@ -20,7 +20,7 @@ function loadlPanetsData() {
       if (isHabitablePlanet(data)) {
        
         habitablePlanets.push(data); 
-     
+     /* console.log("d",habitablePlanets); */
       }
     })
     .on('error', (err) => {
@@ -35,10 +35,10 @@ function loadlPanetsData() {
   
 }
 
-function httpGeAllPlanets() {
+ function getAllPlanets() {
   return habitablePlanets
 }
   module.exports = {
     loadlPanetsData,
-    httpGeAllPlanets
+    getAllPlanets
   }
