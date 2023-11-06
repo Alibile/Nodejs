@@ -42,13 +42,10 @@ function loadlPanetsData() {
 }
 
 async function savePlanets(planet) {
-  console.log(planet);
   try {
       await  planets.updateOne({
     keplerName: planet.keplerName,
-   }/* ,{
-    keplerName: planet.keplerName,
-   } */,{upsert: true})
+   },{upsert: true})
   } catch (error) {
     console.error(`Could not save ${error}`);
   }
